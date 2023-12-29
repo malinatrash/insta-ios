@@ -8,18 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		E6F6313B2B3EE6DD00C177C9 /* insta_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6313A2B3EE6DD00C177C9 /* insta_iosApp.swift */; };
-		E6F6313D2B3EE6DD00C177C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6313C2B3EE6DD00C177C9 /* ContentView.swift */; };
 		E6F6313F2B3EE6DF00C177C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F6313E2B3EE6DF00C177C9 /* Assets.xcassets */; };
 		E6F631432B3EE6DF00C177C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F631422B3EE6DF00C177C9 /* Preview Assets.xcassets */; };
+		E6F6314C2B3EF53000C177C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6314B2B3EF53000C177C9 /* LoginView.swift */; };
+		E6F6314E2B3F11EF00C177C9 /* CurrentUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6314D2B3F11EF00C177C9 /* CurrentUserManager.swift */; };
+		E6F631502B3F176400C177C9 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F6314F2B3F176400C177C9 /* FeedView.swift */; };
+		E6F631522B3F178000C177C9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F631512B3F178000C177C9 /* ProfileView.swift */; };
+		E6F631542B3F2DFF00C177C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F631532B3F2DFF00C177C9 /* HomeView.swift */; };
+		E6F631562B3F2FE300C177C9 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F631552B3F2FE300C177C9 /* AddPostView.swift */; };
+		E6F6315A2B3F39CF00C177C9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F631592B3F39CF00C177C9 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E6F631372B3EE6DD00C177C9 /* insta-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "insta-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F6313A2B3EE6DD00C177C9 /* insta_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insta_iosApp.swift; sourceTree = "<group>"; };
-		E6F6313C2B3EE6DD00C177C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E6F6313E2B3EE6DF00C177C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6F631402B3EE6DF00C177C9 /* insta_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = insta_ios.entitlements; sourceTree = "<group>"; };
 		E6F631422B3EE6DF00C177C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E6F6314B2B3EF53000C177C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E6F6314D2B3F11EF00C177C9 /* CurrentUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserManager.swift; sourceTree = "<group>"; };
+		E6F6314F2B3F176400C177C9 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E6F631512B3F178000C177C9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E6F631532B3F2DFF00C177C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E6F631552B3F2FE300C177C9 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		E6F631592B3F39CF00C177C9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +64,9 @@
 		E6F631392B3EE6DD00C177C9 /* insta-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E6F6315C2B3F3A2E00C177C9 /* Services */,
+				E6F631572B3F399A00C177C9 /* Pages */,
 				E6F6313A2B3EE6DD00C177C9 /* insta_iosApp.swift */,
-				E6F6313C2B3EE6DD00C177C9 /* ContentView.swift */,
 				E6F6313E2B3EE6DF00C177C9 /* Assets.xcassets */,
 				E6F631402B3EE6DF00C177C9 /* insta_ios.entitlements */,
 				E6F631412B3EE6DF00C177C9 /* Preview Content */,
@@ -67,6 +80,43 @@
 				E6F631422B3EE6DF00C177C9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E6F631572B3F399A00C177C9 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6315B2B3F3A0F00C177C9 /* TabBar */,
+				E6F631582B3F39AA00C177C9 /* Auth */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		E6F631582B3F39AA00C177C9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6314B2B3EF53000C177C9 /* LoginView.swift */,
+				E6F631592B3F39CF00C177C9 /* RegisterView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E6F6315B2B3F3A0F00C177C9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E6F631532B3F2DFF00C177C9 /* HomeView.swift */,
+				E6F6314F2B3F176400C177C9 /* FeedView.swift */,
+				E6F631552B3F2FE300C177C9 /* AddPostView.swift */,
+				E6F631512B3F178000C177C9 /* ProfileView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E6F6315C2B3F3A2E00C177C9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E6F6314D2B3F11EF00C177C9 /* CurrentUserManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F6313D2B3EE6DD00C177C9 /* ContentView.swift in Sources */,
+				E6F631502B3F176400C177C9 /* FeedView.swift in Sources */,
+				E6F6314E2B3F11EF00C177C9 /* CurrentUserManager.swift in Sources */,
+				E6F631522B3F178000C177C9 /* ProfileView.swift in Sources */,
+				E6F631562B3F2FE300C177C9 /* AddPostView.swift in Sources */,
+				E6F6314C2B3EF53000C177C9 /* LoginView.swift in Sources */,
+				E6F6315A2B3F39CF00C177C9 /* RegisterView.swift in Sources */,
+				E6F631542B3F2DFF00C177C9 /* HomeView.swift in Sources */,
 				E6F6313B2B3EE6DD00C177C9 /* insta_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
