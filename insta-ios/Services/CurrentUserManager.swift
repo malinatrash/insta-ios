@@ -14,7 +14,7 @@ class CurrentUserManager: ObservableObject {
     
     static let shared = CurrentUserManager()
     
-    private init() {}
+    init() {}
     
     func set(user: User) {
         self.currentUser = user

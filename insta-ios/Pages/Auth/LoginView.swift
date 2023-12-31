@@ -15,7 +15,7 @@ struct LoginView: View {
     @State private var isRegistering = false
     
     func login() {
-        guard let url = URL(string: "http://localhost:8000/users/login") else {
+        guard let url = URL(string: "http://92.51.45.202:8000/users/login") else {
             print("Invalid URL")
             return
         }
@@ -76,7 +76,7 @@ struct LoginView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 100, height: 100)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(hex: 0x0be78c))
                     .padding(.bottom, 20)
                 
                 TextField("Username", text: $username)
@@ -99,7 +99,7 @@ struct LoginView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 50)
-                        .background(Color.blue)
+                        .background(Color(hex: 0x0be78c))
                         .cornerRadius(8)
                 }
                 .padding(.horizontal)
@@ -115,7 +115,7 @@ struct LoginView: View {
                 
                 NavigationLink(destination: RegisterView(), isActive: $isRegistering) {
                     Text("Don't have an account? Register")
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(hex: 0x0be78c))
                 }
             }
             .padding()

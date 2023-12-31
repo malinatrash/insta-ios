@@ -1,81 +1,74 @@
-//
-//  ProfileView.swift
-//  insta-ios
-//
-//  Created by Pavel Naumov on 29.12.2023.
-//
-
 import SwiftUI
 
 struct ProfileView: View {
     @ObservedObject var currentUserManager = CurrentUserManager.shared
+    @State private var image: UIImage? = nil
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
+            Group {
                 if let user = currentUserManager.currentUser {
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150)
-                        .foregroundColor(.blue)
-                    
-                    Text(user.username)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    HStack {
-                        Text("\(user.name) \(user.lastname)")
-                            .font(.headline)
-                            .fontWeight(.bold)
+                    VStack {
+                        HStack(spacing: 20) {
+                            Avatar(username: user.username)
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    VStack {
+                                        Text("3")
+                                        Text("Публикации").font(.caption)
+                                    }
+                                    VStack {
+                                        Text("2591")
+                                        Text("Подписчики").font(.caption)
+                                    }
+                                    VStack {
+                                        Text("91")
+                                        Text("Подписки").font(.caption)
+                                    }
+                                }
+                            }
+                        }
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text("\(user.name) \(user.lastname)")
+                                .font(.callout)
+                                .padding(.top)
+                            Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                                .font(.caption)
+                                .fontWeight(.light)
+                        }.padding(.horizontal)
+                        
+                        Spacer()
                     }
+                    .padding(.top)
+                    .navigationBarItems(trailing:
+                                            HStack {
+                        Button(action: {
+                            self.currentUserManager.currentUser = nil
+                        }) {
+                            Image(systemName: "gear")
+                        }
+                        // Other buttons...
+                    }
+                    )
+                    .navigationBarTitle(user.username)
                 } else {
-                    Image(systemName: "person.circle.fill")
-                                       .resizable()
-                                       .aspectRatio(contentMode: .fill)
-                                       .frame(width: 150, height: 150)
-                                       .foregroundColor(.blue)
-                                   
-                                   Text("malinatrash")
-                                       .font(.title)
-                                       .fontWeight(.bold)
-                                   
-                                   HStack {
-                                       Text("\("Pavel") \("Naumov")")
-                                           .font(.headline)
-                                           .fontWeight(.bold)
-                                   }
-                                   
-                               
+                    Text("Loading...")
                 }
-                
-                Spacer()
             }
-            .padding()
-            .navigationBarItems(trailing:
-                HStack {
-                
-                Button(action: {
-                    // Действия при нажатии на вторую кнопку
-                    // Дополнительные действия
-                }) {
-                    Image(systemName: "gear")
-                }
-                    Button(action: {
-                        // Действия при нажатии на первую кнопку
-                        self.currentUserManager.currentUser = nil // Устанавливаем currentUser в nil или другие действия
-                    }) {
-                        Image(systemName: "exit_to")
-                    }
-                    
-                    
-                }
-            )
         }
+        
     }
 }
 
-
-#Preview {
-    ProfileView()
+struct ProfileView_Previews: PreviewProvider {
+    static var previews: some View {
+        // Creating a sample user for preview
+        let user = User(ID: 1, username: "malinatrash", name: "Наумов", lastname: "Саша", password: "testPassword")
+        
+        // Providing a static instance of CurrentUserManager with a sample user
+        let currentUserManager = CurrentUserManager()
+        currentUserManager.set(user: user)
+        
+        return ProfileView(currentUserManager: currentUserManager)
+    }
 }
